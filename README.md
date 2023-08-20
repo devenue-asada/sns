@@ -1,1 +1,5 @@
 # sns
+
+```
+docker-compose up
+```
