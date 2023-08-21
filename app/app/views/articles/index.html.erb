@@ -1,0 +1,9 @@
+<h1>Articles</h1>
+<ul>
+    <% @articles.each do |row| %>
+        <li>
+            <%= row.title %> <%= row.body %>
+            <a href="/articles/<%= row.id %>" >詳細</a>
+        </li>
+    <% end %>
+</ul>

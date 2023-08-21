@@ -1,0 +1,20 @@
+<h1>新規作成</h1>
+<% form_with model: @article.each do |f| %>
+    <div>
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+        <% @article.erros.full_message_for(:title).each do |m| %>
+            <div><%= m %></div>
+        <% end %>
+    </div>
+    <div>
+        <%= f.label :body %>
+        <%= f.text_area :body %>
+        <% @article.erros.full_message_for(:body).each do |m| %>
+            <div><%= m %></div>
+        <% end %>
+    </div>
+    <div>
+        <%= f.submit %>
+    </div>
+<% end %>
